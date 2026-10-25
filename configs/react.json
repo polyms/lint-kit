@@ -1,0 +1,109 @@
+{
+	"$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+	"css": {
+		"formatter": {
+			"enabled": true,
+			"indentWidth": 2,
+			"quoteStyle": "single"
+		},
+		"linter": { "enabled": false },
+		"parser": { "tailwindDirectives": true }
+	},
+	"extends": ["./base.json"],
+	"files": {
+		"includes": [
+			"**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,json,css,svg,html,webmanifest}",
+			"!**/node_modules",
+			"!**/.pnpm-store",
+			"!**/dist",
+			"!**/build",
+			"!**/coverage",
+			"!**/.next",
+			"!**/next-env.d.ts",
+			"!**/out",
+			"!**/.tanstack",
+			"!**/routeTree.gen.ts",
+			"!**/.output",
+			"!**/.vercel",
+			"!**/.nx"
+		]
+	},
+	"html": {
+		"formatter": {
+			"attributePosition": "auto",
+			"bracketSameLine": true,
+			"enabled": true,
+			"indentScriptAndStyle": true,
+			"indentStyle": "tab",
+			"indentWidth": 2,
+			"lineEnding": "lf",
+			"lineWidth": 110,
+			"whitespaceSensitivity": "css"
+		},
+		"parser": { "interpolation": true }
+	},
+	"linter": {
+		"domains": {
+			"react": "recommended",
+			"tailwind": "recommended"
+		},
+		"rules": {
+			"a11y": {
+				"noSvgWithoutTitle": "off",
+				"preset": "recommended",
+				"useKeyWithClickEvents": "error",
+				"useValidAnchor": "error"
+			},
+			"nursery": {
+				"noTailwindArbitraryValue": "error",
+				"noTailwindLegacyUtilities": "error",
+				"noTailwindRawColors": {
+					"level": "error",
+					"options": {
+						"allowedColors": [
+							"neutral-50",
+							"neutral-100",
+							"neutral-200",
+							"neutral-300",
+							"neutral-400",
+							"neutral-500",
+							"neutral-600",
+							"neutral-700",
+							"neutral-800",
+							"neutral-900",
+							"neutral-950"
+						]
+					}
+				},
+				"useTailwindSortedClasses": {
+					"fix": "safe",
+					"level": "error"
+				}
+			}
+		}
+	},
+	"overrides": [
+		{
+			"assist": { "actions": { "source": { "useSortedKeys": "off" } } },
+			"includes": ["**/*.tsx", "**/*.jsx"],
+			"linter": {
+				"rules": {
+					"a11y": { "useAltText": "error", "useButtonType": "error" },
+					"style": {
+						"useNamingConvention": {
+							"level": "error",
+							"options": {
+								"conventions": [],
+								"requireAscii": true,
+								"strictCase": false
+							}
+						}
+					}
+				}
+			}
+		}
+	],
+	"tailwind": {
+		"attributes": ["class", "className", "classList"]
+	}
+}

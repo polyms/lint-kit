@@ -1,0 +1,10 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/manifest_schema.json",
+	"configs": [
+		{ "base": "./configs/base.json" },
+		{ "react": "./configs/react.json" },
+		{ "next": "./configs/next.json" },
+		{ "node": "./configs/node.json" }
+	],
+	"version": 1
+}

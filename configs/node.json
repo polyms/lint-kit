@@ -1,0 +1,17 @@
+{
+	"$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+	"extends": ["./base.json"],
+	"files": {
+		"includes": [
+			"**/*.{js,mjs,cjs,ts,mts,cts,json}",
+			"!**/node_modules",
+			"!**/.pnpm-store",
+			"!**/dist",
+			"!**/build",
+			"!**/coverage"
+		]
+	},
+	"javascript": {
+		"globals": ["Buffer", "process", "__dirname", "__filename", "global"]
+	}
+}

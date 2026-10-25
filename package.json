@@ -1,6 +1,6 @@
 {
 	"name": "@polyms/lint-kit",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Biome configuration presets for the Polyms ecosystem.",
 	"license": "MIT",
 	"author": "Polyms",
@@ -15,7 +15,8 @@
 	"keywords": ["biome", "biome-plugin", "presets", "polyms"],
 	"type": "module",
 	"scripts": {
-		"check": "biome check --write . && prettier -l --write ."
+		"check": "biome check --write . && prettier -l --write .",
+		"release": "zx scripts/release.mjs"
 	},
 	"exports": {
 		"biome": "./biome-manifest.json"
@@ -27,7 +28,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.6.3",
 		"lefthook": "~2.2.2",
-		"prettier": "~3.9.1"
+		"prettier": "~3.9.1",
+		"zx": "^8.8.5"
 	},
 	"publishConfig": {
 		"registry": "https://registry.polyms.dev"

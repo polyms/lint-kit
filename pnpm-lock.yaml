@@ -170,11 +170,14 @@ importers:
         specifier: 2.6.3
         version: 2.6.3
       lefthook:
-        specifier: ^2.2.2
+        specifier: ~2.2.2
         version: 2.2.2
       prettier:
         specifier: ~3.9.1
         version: 3.9.10
+      zx:
+        specifier: ^8.8.5
+        version: 8.8.5
 
 packages:
 
@@ -311,6 +314,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  zx@8.8.5:
+    resolution: {integrity: sha512-SNgDF5L0gfN7FwVOdEFguY3orU5AkfFZm9B5YSHog/UDHv+lvmd82ZAsOenOkQixigwH2+yyH198AwNdKhj+RA==}
+    engines: {node: '>= 12.17.0'}
+    hasBin: true
+
 snapshots:
 
   '@biomejs/biome@2.6.3':
@@ -404,3 +412,5 @@ snapshots:
       lefthook-windows-x64: 2.2.2
 
   prettier@3.9.10: {}
+
+  zx@8.8.5: {}

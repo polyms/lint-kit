@@ -51,6 +51,17 @@ The package is published to GitHub Packages. Point the `@polyms` scope at that r
 pnpm add -D @polyms/lint-kit
 ```
 
-## Publish
+## Commits
 
-`.github/workflows/publish.yml` publishes when a `v*` tag is pushed. The tag must match `version` in `package.json` (currently `0.1.0`), for example `v0.1.0`.
+Subjects follow Conventional Commits: `<type>[scope]: <imperative summary>`. Types are `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `ci`, `style`, `perf`, and `build`. Lowercase after the colon, no trailing period, at most 72 characters. Scope is optional.
+
+## Release
+
+```bash
+pnpm release
+pnpm release minor
+pnpm release 1.2.3
+git push --follow-tags
+```
+
+`pnpm release` bumps `package.json` (patch by default), commits only that file as `chore(release): v{x.y.z}`, and creates an annotated tag. It does not push. `.github/workflows/publish.yml` publishes when that `v*` tag is pushed. The tag must match `version` (currently `0.1.0`).

@@ -6,6 +6,8 @@
 			"**/*.{js,mjs,cjs,ts,mts,cts,json}",
 			"!**/node_modules",
 			"!**/.pnpm-store",
+			"!**/.nx",
+			"!**/out",
 			"!**/dist",
 			"!**/build",
 			"!**/coverage"

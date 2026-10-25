@@ -12,6 +12,9 @@
 		"enabled": true,
 		"includes": ["**", "!**/tsconfig*", "!**/package.json", "!**/project.json", "!**/nx.json"]
 	},
+	"files": {
+		"includes": ["!**/.agents/skills", "!**/.github/skills", "!**/.cursor/skills", "!**/.claude/skills"]
+	},
 	"formatter": {
 		"attributePosition": "auto",
 		"bracketSameLine": true,

@@ -14,18 +14,18 @@
 		"includes": [
 			"**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,json,css,svg,html,webmanifest}",
 			"!**/node_modules",
-			"!**/.pnpm-store",
 			"!**/dist",
 			"!**/build",
 			"!**/coverage",
-			"!**/.next",
 			"!**/next-env.d.ts",
 			"!**/out",
+			"!**/.pnpm-store",
+			"!**/.next",
 			"!**/.tanstack",
-			"!**/routeTree.gen.ts",
 			"!**/.output",
 			"!**/.vercel",
-			"!**/.nx"
+			"!**/.nx",
+			"!**/routeTree.gen.ts"
 		]
 	},
 	"html": {

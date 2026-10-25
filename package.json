@@ -1,6 +1,6 @@
 {
 	"name": "@polyms/lint-kit",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Biome configuration presets for the Polyms ecosystem.",
 	"license": "MIT",
 	"author": "Polyms",
@@ -32,7 +32,7 @@
 		"zx": "^8.8.5"
 	},
 	"publishConfig": {
-		"registry": "https://registry.polyms.dev"
+		"registry": "https://npm.pkg.github.com"
 	},
 	"packageManager": "pnpm@12.14.0"
 }
